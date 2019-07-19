@@ -3,10 +3,10 @@
   height: 100%;
   padding-top: 45px;
   position: fixed;
-  right: -250px;
+  right: -300px;
   top: 0;
   transition: 0.5s;
-  width: 250px;
+  width: 300px;
   z-index: 9;
   .menubar-icon {
     background-color: white;
@@ -21,28 +21,28 @@
     transition: 0.4s;
     width: 25px;
     &:after {
-    background-color: white;
-    border-top: 2px solid darkslategray;
-    bottom: 0;
-    content: "";
-    height: 6px;
-    left: 0;
-    position: absolute;
-    top: inherit;
-    transition: 0.4s;
-    width: 100%;
+      background-color: white;
+      border-top: 2px solid darkslategray;
+      bottom: 0;
+      content: "";
+      height: 6px;
+      left: 0;
+      position: absolute;
+      top: inherit;
+      transition: 0.4s;
+      width: 100%;
     }
     &:before {
-    background-color: white;
-    border-bottom: 2px solid darkslategray;
-    bottom: inherit;
-    content: "";
-    height: 6px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    transition: 0.4s;
-    width: 100%;
+      background-color: white;
+      border-bottom: 2px solid darkslategray;
+      bottom: inherit;
+      content: "";
+      height: 6px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: 0.4s;
+      width: 100%;
     }
   }
   &.active {
