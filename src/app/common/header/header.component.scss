@@ -1,0 +1,25 @@
+.page-header {
+    align-items: center;
+    background-color: darkslategrey;
+    border-bottom: 1px solid darkcyan;
+    color: white;
+    justify-content: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    .page-title {
+      flex: auto;
+      max-width: calc(100% - 30px);
+    }
+    .menu-bar {
+      background-color: transparent;
+      flex: auto;
+      height: 16px;
+      padding: 5px 0;
+      max-width: 25px;
+    }
+  }
+  
