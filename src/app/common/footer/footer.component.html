@@ -1,0 +1,14 @@
+<div class="row m-0 page-footer">
+    <div class="col-6 rights-label">
+        {{commonName.subTextRightsReserved}}
+    </div>
+    <div class="col-6 network-links">
+        <ul class="social-network">
+            <li *ngFor="let data of dataFromJSON">
+                <a [name]="data.type" [href]="data.data['url']" [target]="data.data['targetAttr']">
+                    <span [class]="data.data.fontIcon.iconClass"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,2 @@
+<div *ngFor="let item of pageOfItems">{{item.name}}</div>
+<jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
