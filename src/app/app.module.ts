@@ -12,6 +12,9 @@ import { WrapperComponent } from './common/wrapper/wrapper.component';
 import { LoaderComponent } from './common/loader/loader.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { AngularPaginationComponent } from './pages/angular-pagination/angular-pagination.component';
+import { ExchangeDataComponent } from './pages/exchange-data/exchange-data.component';
+import { ParentComponent } from './pages/exchange-data/parent/parent.component';
+import { ChildComponent } from './pages/exchange-data/child/child.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { AngularPaginationComponent } from './pages/angular-pagination/angular-p
     WrapperComponent,
     LoaderComponent,
     HomePageComponent,
-    AngularPaginationComponent
+    AngularPaginationComponent,
+    ExchangeDataComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
