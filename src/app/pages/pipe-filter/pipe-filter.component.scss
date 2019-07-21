@@ -1,0 +1,27 @@
+.data-table {
+    margin-top: 10px;
+}
+.data-table .row {
+  border-top: 1px solid #000;
+  &:last-child {
+    border-bottom: 1px solid #000;
+  }
+}
+.data-table .header {
+    background-color: darkgray;
+    color: white;
+    font-weight: 600;
+}
+.data-table .col {
+    border-right: 1px solid #000;
+}
+.data-table .data-col {
+  text-align: center;
+  max-width: 150px;
+}
+.data-table .numb-col {
+  border:1px solid #000;
+  border-width: 0 1px 0 1px;
+  min-width: 50px;
+  text-align: center;
+}
