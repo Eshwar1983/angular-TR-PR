@@ -1,0 +1,88 @@
+{
+    "projectPeriodDuration": [
+        {
+            "startDate": "1-1-2015",
+            "endDate": "30-4-2015",
+            "clientName": "USG",
+            "projectName": "USG - Regional Camps allow athletes to improve fundamental skills"
+        },
+        {
+            "startDate": "01-04-2015",
+            "endDate": "30-10-2016",
+            "clientName": "UPT",
+            "projectName": "UPT - Uploading Tips Regional Camps allow athletes to improve fundamental skills"
+        },
+        {
+            "startDate": "1-1-2016",
+            "endDate": "30-4-2016",
+            "clientName": "HGM",
+            "projectName": "HGM - Testing tool"
+        },
+        {
+            "startDate": "01-04-2016",
+            "endDate": "30-10-2017",
+            "clientName": "ENT",
+            "projectName": "ENT - Adding Tips"
+        },
+        {
+            "startDate": "1-1-2017",
+            "endDate": "30-4-2017",
+            "clientName": "MGH",
+            "projectName": "MGH - Accounting tool, Appraisal"
+        },
+        {
+            "startDate": "01-04-2017",
+            "endDate": "30-10-2017",
+            "clientName": "Tnf-2",
+            "projectName": "Tnf(2) - Accounting tool, Appraisal"
+        },
+        {
+            "startDate": "01-06-2016",
+            "endDate": "30-10-2016",
+            "clientName": "Ck-22",
+            "projectName": "Ck-22 - Accounting tool, Appraisal"
+        },
+        {
+            "startDate": "01-08-2017",
+            "endDate": "30-10-2017",
+            "clientName": "MGH",
+            "projectName": "MGH - Accounting tool, Appraisal"
+        },
+        {
+            "startDate": "01-04-2016",
+            "endDate": "30-10-2016",
+            "clientName": "Ck-12",
+            "projectName": "Ck-12 - Accounting tool, Appraisal"
+        },
+        {
+            "startDate": "01-04-2017",
+            "endDate": "30-10-2017",
+            "clientName": "Tnf",
+            "projectName": "Tnf - Accounting tool, Appraisal"
+        },
+        {
+            "startDate": "01-04-2018",
+            "endDate": "30-10-2018",
+            "clientName": "MGH-3",
+            "projectName": "MGH-3 - Calculation Tool"
+        },
+        {
+            "startDate": "01-11-2018",
+            "endDate": "30-03-2019",
+            "clientName": "Tiping",
+            "projectName": "Tiping value of data"
+        },
+        {
+            "startDate": "01-04-2019",
+            "endDate": "30-10-2019",
+            "clientName": "HSB-3",
+            "projectName": "HSB-3 - Calculation Tool"
+        },
+        {
+            "startDate": "01-11-2019",
+            "endDate": "30-03-2020",
+            "clientName": "Reporting",
+            "projectName": "Reporting Types"
+        }
+    ]
+}
