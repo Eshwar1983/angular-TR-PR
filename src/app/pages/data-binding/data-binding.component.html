@@ -1,0 +1,63 @@
+<h2>4 different types of Data Binding in Angular:</h2>
+
+<h6 class="label-title">1) Interpolation Binding</h6>
+<div>
+  <p>The person's name is {{person.name}}.</p>
+</div>
+<hr>
+<h6 class="label-title">2) Property Binding</h6>
+<div class="d-flex">
+  <div class="d-flex">
+    <img [src]='product.imageUrl' [title]='product.productName' class="property-img mr-3" [ngClass]="{rounded: shouldShow, noround: !shouldShow}"/>
+    <!-- <button class="btn btn-primary" (click)="borderRadius()">Round</button> -->
+    <div class="button r" id="button-1" (click)="borderRadius()">
+      <input type="checkbox" class="checkbox" checked>
+      <div class="knobs"></div>
+      <div class="layer"></div>
+    </div>
+  </div>
+  <div class="manual-toggle">
+    <button (click)="showOrHideManually()" class="manual-button btn btn-primary"> Show/Hide manually </button>
+    <label #myLabel class="text-label"> Different types of Data Binding in Angular:(SOME TEXT BLABLA) </label>
+  </div>
+</div>
+<hr>
+<h6 class="label-title">3) Event Binding</h6>
+<div class="d-flex">
+  <button (click)="decrement()">-</button>
+  <span class="counter-wrap">{{counter}}</span>
+  <button (click)="increment()">+</button>
+</div>
+
+<hr>
+<h6 class="label-title">4) Two-Way Binding</h6>
+<div>
+  <input [ngModel]="username" (ngModelChange)="username = $event" type="text" value="Eshwar">
+  <p>Hello {{username}}!</p>
+</div>
+<hr>
+<div>
+  <h6 class="label-title">Keyboard Events</h6>
+  <p>
+    <input type="text" (keydown)="onEvent($event)" on-keyup="onEvent($event)">
+    <span class="large">Type: {{event?.type}}</span>
+  </p>
+  <p>ctrl: {{event?.ctrlKey}}, shift: {{event?.shiftKey}}, meta: {{event?.metaKey}}</p>
+</div>
+<hr>
+<h6>HTML Summary details</h6>
+<details>
+  <summary>Copyright 1999-2018.</summary>
+  <p> - by Refsnes Data. All Rights Reserved.</p>
+  <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
+</details>
+<hr>
+<h6>HTML datalist</h6>
+<input list="browsers">
+<datalist id="browsers">
+  <option value="Internet Explorer">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>

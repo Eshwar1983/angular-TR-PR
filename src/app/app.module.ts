@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 
 import { ProjectListService } from './service/project-list.service';
 import { FilterPipe } from './service/filter.pipe';
+import { HostDirectiveService } from './service/host-directive.service';
+import { ConvertorPipe } from './service/convertor.pipe.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +22,9 @@ import { ExchangeDataComponent } from './pages/exchange-data/exchange-data.compo
 import { ParentComponent } from './pages/exchange-data/parent/parent.component';
 import { ChildComponent } from './pages/exchange-data/child/child.component';
 import { PipeFilterComponent } from './pages/pipe-filter/pipe-filter.component';
+import { DataBindingComponent } from './pages/data-binding/data-binding.component';
+import { DirectivesTypesComponent } from './pages/directives-types/directives-types.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -36,7 +41,11 @@ import { PipeFilterComponent } from './pages/pipe-filter/pipe-filter.component';
     ParentComponent,
     ChildComponent,
     PipeFilterComponent,
-    FilterPipe
+    FilterPipe,
+    DataBindingComponent,
+    DirectivesTypesComponent,
+    HostDirectiveService,
+    ConvertorPipe
   ],
   imports: [
     BrowserModule,
