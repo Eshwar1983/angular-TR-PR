@@ -1,10 +1,10 @@
 <!-- <div *ngFor="let item of pageOfItems">
     {{item.name}}
-</div> -->
+</div> 
 <div class="pagination-wrap">
     <div *ngFor="let item of pageOfItems">
         <div class="d-flex justify-content">
-            <span class="num-col">{{item.id}})</span><span class="label-name">Name:</span>{{item.name}}
+            <span class="num-col">{{item.id}})</span class="label-name">Name:</span>{{item.name}}
         </div>
         <div style="padding-left: 30px;">
             <div class="d-flex justify-content">
@@ -16,4 +16,45 @@
         </div>
     </div>
     <jw-pagination [items]="items" (changePage)="onChangePage($event)" class="align-item-center"></jw-pagination>
+</div>
+<div class="pagination-wrap">
+    <div *ngFor="let item of pageOfItems">
+        <div class="d-flex justify-content">
+            <span class="num-col">{{item.id}})</span class="label-name">Name:</span>{{item.name}}
+        </div>
+        <div style="padding-left: 30px;">
+            <div class="">
+                <span class="label-name">Phone No:</span><span>{{item.phoneno}}</span>
+                <span class="label-name"> Email:</span><span>{{item.email}}</span>
+            </div>
+            <span class="label-name">Gender:</span><span>{{item.gender}}</span>
+            <span class="label-name">Nationality:</span><span>{{item.nationality}}</span>
+        </div>
+    </div>
+    <jw-pagination [items]="items" (changePage)="onChangePage($event)" class="align-item-center"></jw-pagination>
+</div>-->
+<div class="pagenation-wrap">
+  <table class="w-100">
+    <thead>
+      <tr>
+        <th class="num-col">ID</th>
+        <th>Name</th>
+        <th>Phone No</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Nationality</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of pageOfItems">
+        <td class="num-col">{{item.id}})</td>
+        <td class="label-name">{{item.name}}</td>
+        <td class="label-name">{{item.phoneno}}</td>
+        <td class="label-name">{{item.email}}</td>
+        <td class="label-name">{{item.gender}}</td>
+        <td class="label-name">{{item.nationality}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <jw-pagination [items]="items" (changePage)="onChangePage($event)" class="align-item-center"></jw-pagination>
 </div>
