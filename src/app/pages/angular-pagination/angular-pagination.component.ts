@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map'
@@ -6,7 +6,8 @@ import 'rxjs/add/operator/map'
 @Component({
   selector: 'app-angular-pagination',
   templateUrl: './angular-pagination.component.html',
-  styleUrls: ['./angular-pagination.component.scss']
+  styleUrls: ['./angular-pagination.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class AngularPaginationComponent implements OnInit {
 

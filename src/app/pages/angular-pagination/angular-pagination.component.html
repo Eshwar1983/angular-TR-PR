@@ -1,2 +1,19 @@
-<div *ngFor="let item of pageOfItems">{{item.name}}</div>
-<jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
+<!-- <div *ngFor="let item of pageOfItems">
+    {{item.name}}
+</div> -->
+<div class="pagination-wrap">
+    <div *ngFor="let item of pageOfItems">
+        <div class="d-flex justify-content">
+            <span class="num-col">{{item.id}})</span><span class="label-name">Name:</span>{{item.name}}
+        </div>
+        <div style="padding-left: 30px;">
+            <div class="d-flex justify-content">
+                <span class="label-name">Phone No:</span>{{item.phoneno}}
+                <span class="label-name"> Email:</span>{{item.email}}
+            </div>
+            <span class="label-name">Gender:</span>{{item.gender}}
+            <span class="label-name">Nationality:</span>{{item.nationality}}
+        </div>
+    </div>
+    <jw-pagination [items]="items" (changePage)="onChangePage($event)" class="align-item-center"></jw-pagination>
+</div>
