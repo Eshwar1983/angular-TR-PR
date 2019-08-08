@@ -1,0 +1,17 @@
+<h2>Item List</h2>
+<ul class="list-unstyled m-0">
+  <li *ngFor="let contact of contactList">
+    <span class="d-inline-block w-25">
+      {{contact.name}}
+    </span>
+    <button (click)="deleteContact(contact.name)" type="button" class="close float-none" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </li>
+</ul>
+<form (submit)="addContact()">
+  <input type="text" [(ngModel)]="txtName" #enterText name="Name" />
+  <button type="submit" class="btn btn-primary">Add Item</button>
+</form>
+
+<app-ad-rm-parent></app-ad-rm-parent>

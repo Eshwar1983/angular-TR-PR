@@ -24,7 +24,9 @@ import { ChildComponent } from './pages/exchange-data/child/child.component';
 import { PipeFilterComponent } from './pages/pipe-filter/pipe-filter.component';
 import { DataBindingComponent } from './pages/data-binding/data-binding.component';
 import { DirectivesTypesComponent } from './pages/directives-types/directives-types.component';
-import { from } from 'rxjs';
+import { AddRemoveItemsComponent } from './pages/add-remove-items/add-remove-items.component';
+import { AdRmParentComponent } from './pages/add-remove-items/ad-rm-parent/ad-rm-parent.component';
+import { AdRmChildComponent } from './pages/add-remove-items/ad-rm-parent/ad-rm-child/ad-rm-child.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,10 @@ import { from } from 'rxjs';
     DataBindingComponent,
     DirectivesTypesComponent,
     HostDirectiveService,
-    ConvertorPipe
+    ConvertorPipe,
+    AddRemoveItemsComponent,
+    AdRmParentComponent,
+    AdRmChildComponent
   ],
   imports: [
     BrowserModule,
