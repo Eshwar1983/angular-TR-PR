@@ -7,6 +7,7 @@ import { PipeFilterComponent } from './pages/pipe-filter/pipe-filter.component';
 import { DataBindingComponent } from './pages/data-binding/data-binding.component';
 import { DirectivesTypesComponent } from './pages/directives-types/directives-types.component';
 import { AddRemoveItemsComponent } from './pages/add-remove-items/add-remove-items.component';
+import { PipeTransformDataComponent } from './pages/pipe-transform-data/pipe-transform-data.component';
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent, pathMatch: 'full' },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'PipeFilter', component: PipeFilterComponent, pathMatch: 'full' },
   { path: 'DataBinding', component: DataBindingComponent, pathMatch: 'full' },
   { path: 'DirectivesType', component: DirectivesTypesComponent, pathMatch: 'full' },
-  { path: 'AddRemoveItems', component: AddRemoveItemsComponent, pathMatch: 'full' }
+  { path: 'AddRemoveItems', component: AddRemoveItemsComponent, pathMatch: 'full' },
+  { path: 'PipeTransformData', component: PipeTransformDataComponent, pathMatch: 'full' }
 ];
 
 @NgModule({

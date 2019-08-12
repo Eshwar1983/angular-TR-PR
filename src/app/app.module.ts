@@ -25,6 +25,7 @@ import { PipeFilterComponent } from './pages/pipe-filter/pipe-filter.component';
 import { DataBindingComponent } from './pages/data-binding/data-binding.component';
 import { DirectivesTypesComponent } from './pages/directives-types/directives-types.component';
 import { AddRemoveItemsComponent } from './pages/add-remove-items/add-remove-items.component';
+import { PipeTransformDataComponent } from './pages/pipe-transform-data/pipe-transform-data.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { AddRemoveItemsComponent } from './pages/add-remove-items/add-remove-ite
     DirectivesTypesComponent,
     HostDirectiveService,
     ConvertorPipe,
-    AddRemoveItemsComponent
+    AddRemoveItemsComponent,
+    PipeTransformDataComponent
   ],
   imports: [
     BrowserModule,
