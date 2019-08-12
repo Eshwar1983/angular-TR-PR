@@ -1,0 +1,44 @@
+<div style = "width:100%;">  
+  <h1>Pipe types</h1>
+  <div> 
+    <div class="d-flex align-items-center">
+      <h2>Uppercase Pipe:</h2>  
+      <b>{{title | uppercase}}</b><br/>  
+    </div>
+    <div class="d-flex align-items-center">
+      <h2>Lowercase Pipe:</h2>  
+      <b>{{title | lowercase}}</b>  
+    </div>
+    <div class="d-flex align-items-center">
+      <h2>Currency Pipe:</h2>
+      <div>
+        <b>{{6589.23 | currency:"USD"}}</b><br/>  
+        <b>{{6589.23 | currency:"USD":true}}</b> //Boolean true is used to get the sign of the currency.  
+      </div>
+    </div>
+    <div class="d-flex align-items-center">
+      <h2>Date pipe:</h2>
+      <div>
+        <b>{{todaydate | date:'d/M/y'}}</b><br/>  
+        <b>{{todaydate | date:'shortTime'}}</b>
+      </div>
+    </div>
+    <div class="d-flex align-items-center">
+      <h2>Decimal Pipe:</h2>  
+      <b>{{ 454.78787814 | number: '3.4-4' }}</b> // 3 is for main integer, 4 -4 are for integers to be displayed. 
+    </div>
+    <div class="d-flex align-items-center">
+      <h2>Json Pipe:</h2>  
+      <b>{{ jsonval | json }}</b>  
+    </div>
+    <div class="d-flex align-items-center">
+      <h2>Percent Pipe:</h2>  
+      <b>{{00.54565 | percent}}</b>  
+    </div>
+    <div class="d-flex align-items-center">
+      <h2>Slice Pipe:</h2>  
+      <b>{{months | slice:2:6}}</b>  
+      // here 2 and 6 refers to the start and the end index  
+    </div>
+  </div>  
+</div>  
