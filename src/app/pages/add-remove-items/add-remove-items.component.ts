@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { dynamicAddRemove } from '../dynamic-add-remove/dynamic-add-remove.component';
+import { FormGroup, FormArray, FormBuilder, Validators,ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-add-remove-items',
@@ -10,8 +10,13 @@ export class AddRemoveItemsComponent implements OnInit {
 
   contactList;
   txtName;
+  addForm : FormGroup;
 
-  constructor() { }
+  constructor(fb: FormBuilder) {
+    this.addForm = fb.group({
+      'name' : [null, Validators.required]
+    });
+  }
 
   @ViewChild('enterText', { static: false, }) nameField: ElementRef;
   ngOnInit() {
@@ -23,18 +28,11 @@ export class AddRemoveItemsComponent implements OnInit {
     ]
   }
 
-  /*isSpacesOnly = function (field) {
-    let r = field.value.replace(/\s/g, "")
-    return (r.length == 0)
-  }*/
-
-  addContact() {
-    //if(this.isSpacesOnly(this)){
-      this.contactList.push(
-        { name: this.txtName }
-      )
-    //}
-    this.nameField.nativeElement.value = "";
+  addContact(value: any) {
+    this.contactList.push(
+      { name: this.txtName }
+    )
+    this.addForm.reset();
   }
 
   deleteContact(name) {

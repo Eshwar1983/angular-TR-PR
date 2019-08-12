@@ -9,9 +9,9 @@
     </button>
   </li>
 </ul>
-<form (submit)="addContact()">
-  <input type="text" [(ngModel)]="txtName" #enterText name="Name" />
-  <button type="submit" class="btn btn-primary">Add Item</button>
+<form [formGroup]="addForm" (ngSubmit)="addContact(addForm.value)">
+  <div class="form-group d-flex">
+    <input type="text" [(ngModel)]="txtName" #enterText class="form-control w-25" name="Name" [formControl]="addForm.controls['name']" />
+    <button type="submit" class="btn btn-primary" [disabled]="!addForm.valid">Add Item</button>
+  </div>
 </form>
-
-<app-ad-rm-parent></app-ad-rm-parent>
