@@ -91,7 +91,7 @@
         "id": 12,
         "name": "Neile Keets",
         "phoneno": "(956) 9360112",
-        "email": "nkeetsb@canalblog.com",
+        "email": "nkeetsb@canalemail.com",
         "gender": "Female",
         "nationality": "Finland"
     },
@@ -115,7 +115,7 @@
         "id": 15,
         "name": "Carola Balasin",
         "phoneno": "(262) 7945277",
-        "email": "cbalasine@blogger.com",
+        "email": "cbalasine@emailger.com",
         "gender": "Female",
         "nationality": "Bolivia"
     },
@@ -158,5 +158,40 @@
         "email": "gmordonj@uiuc.edu",
         "gender": "Female",
         "nationality": "Greece"
+    },
+    {
+        "name": "Anil kumar",
+        "id": 34,
+        "email": "https://code-view.com"
+    },
+    {
+        "name": "Sunil Kumar Singh",
+        "id": 28,
+        "email": "https://code-sample.xyz"
+    },
+    {
+        "name": "Sushil Singh",
+        "id": 24,
+        "email": "https://code-sample.com"
+    },
+    {
+        "name": "Aradhya Singh",
+        "id": 55,
+        "email": "https://code-sample.com"
+    },
+    {
+        "name": "Reena Singh",
+        "id": 28,
+        "email": "https://code-sample.com"
+    },
+    {
+        "name": "Alok Singh",
+        "id": 35,
+        "email": "https://code-sample.com"
+    },
+    {
+        "name": "Dilip Singh",
+        "id": 34,
+        "email": "https://code-sample.com"
     }
 ]

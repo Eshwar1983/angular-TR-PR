@@ -1,0 +1,17 @@
+<h2>Item List</h2>
+<ul class="list-unstyled m-0">
+  <li *ngFor="let contact of contactList">
+    <span class="d-inline-block w-25">
+      {{contact.name}}
+    </span>
+    <button (click)="deleteContact(contact.name)" type="button" class="close float-none" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </li>
+</ul>
+<form [formGroup]="addForm" (ngSubmit)="addContact(addForm.value)">
+  <div class="form-group d-flex">
+    <input type="text" [(ngModel)]="txtName" #enterText class="form-control w-25" name="Name" [formControl]="addForm.controls['name']" />
+    <button type="submit" class="btn btn-primary" [disabled]="!addForm.valid">Add Item</button>
+  </div>
+</form>

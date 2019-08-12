@@ -6,6 +6,7 @@ import { ExchangeDataComponent } from './pages/exchange-data/exchange-data.compo
 import { PipeFilterComponent } from './pages/pipe-filter/pipe-filter.component';
 import { DataBindingComponent } from './pages/data-binding/data-binding.component';
 import { DirectivesTypesComponent } from './pages/directives-types/directives-types.component';
+import { AddRemoveItemsComponent } from './pages/add-remove-items/add-remove-items.component';
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent, pathMatch: 'full' },
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'ExchangeData', component: ExchangeDataComponent, pathMatch: 'full' },
   { path: 'PipeFilter', component: PipeFilterComponent, pathMatch: 'full' },
   { path: 'DataBinding', component: DataBindingComponent, pathMatch: 'full' },
-  { path: 'DirectivesType', component: DirectivesTypesComponent, pathMatch: 'full' }
+  { path: 'DirectivesType', component: DirectivesTypesComponent, pathMatch: 'full' },
+  { path: 'AddRemoveItems', component: AddRemoveItemsComponent, pathMatch: 'full' }
 ];
 
 @NgModule({

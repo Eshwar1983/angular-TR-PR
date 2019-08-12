@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { JwPaginationComponent } from 'jw-angular-pagination';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ProjectListService } from './service/project-list.service';
 import { FilterPipe } from './service/filter.pipe';
@@ -24,7 +24,7 @@ import { ChildComponent } from './pages/exchange-data/child/child.component';
 import { PipeFilterComponent } from './pages/pipe-filter/pipe-filter.component';
 import { DataBindingComponent } from './pages/data-binding/data-binding.component';
 import { DirectivesTypesComponent } from './pages/directives-types/directives-types.component';
-import { from } from 'rxjs';
+import { AddRemoveItemsComponent } from './pages/add-remove-items/add-remove-items.component';
 
 @NgModule({
   declarations: [
@@ -45,13 +45,15 @@ import { from } from 'rxjs';
     DataBindingComponent,
     DirectivesTypesComponent,
     HostDirectiveService,
-    ConvertorPipe
+    ConvertorPipe,
+    AddRemoveItemsComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ProjectListService],
   bootstrap: [AppComponent]
