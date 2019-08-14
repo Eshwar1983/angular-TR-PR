@@ -1,5 +1,7 @@
 <div class="pagenation-wrap">
+  <div class="my-4">
     <input type="text" [(ngModel)]="searchText" #searchField placeholder="Serach any fields" />
+  </div>
   <table class="w-100">
     <thead>
       <tr>
@@ -23,5 +25,52 @@
       </tr>
     </tbody>
   </table>
-  <jw-pagination [items]="items" (changePage)="onChangePage($event)" class="align-item-center"></jw-pagination>
+  <div class="mt-4 pagination-bar">
+    <jw-pagination [items]="items" (changePage)="onChangePage($event)" class=""></jw-pagination>
+  </div>
+  <hr/>
+  <div class="my-4 d-flex justify-content-between">
+    <input type="text" [(ngModel)]="searchTableText" placeholder="Serach any fields" />
+    <select [(ngModel)]="itemsPerPage">
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="20">20</option>
+      <option value="50">50</option>
+    </select>
+    <!--<select [(ngModel)]="selectedValue">
+      <option *ngFor="let item of items;" [value]="item.name">{{item.name}}</option>
+    </select>
+    <select>
+      <option>25</option>
+      <option>50</option>
+      <option>75</option>
+      <option>100</option>
+    </select>-->
+  </div>
+  <table class="w-100">
+    <thead>
+      <tr>
+        <th class="num-col">ID</th>
+        <th>Name</th>
+        <th>Phone No</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Nationality</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of collection | paginate: { id: result?.paginationID, itemsPerPage: itemsPerPage, currentPage: p } | 
+        customFilter : {name: searchTableText, phoneno: searchTableText,  email: searchTableText,  gender: searchTableText,  nationality: searchTableText};">
+        <td class="num-col">{{item.id}})</td>
+        <td class="label-name">{{item.name}}</td>
+        <td class="label-name">{{item.phoneno}}</td>
+        <td class="label-name">{{item.email}}</td>
+        <td class="label-name">{{item.gender}}</td>
+        <td class="label-name">{{item.nationality}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="mt-4">
+    <pagination-controls [id]="result?.paginationID" (pageChange)="p = $event"></pagination-controls>
+  </div>
 </div>

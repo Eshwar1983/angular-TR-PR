@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { JwPaginationComponent } from 'jw-angular-pagination';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 import { ProjectListService } from './service/project-list.service';
 import { FilterPipe } from './service/filter.pipe';
@@ -52,6 +53,7 @@ import { PipeTransformDataComponent } from './pages/pipe-transform-data/pipe-tra
   ],
   imports: [
     BrowserModule,
+    NgxPaginationModule,
     HttpModule,
     AppRoutingModule,
     FormsModule,
