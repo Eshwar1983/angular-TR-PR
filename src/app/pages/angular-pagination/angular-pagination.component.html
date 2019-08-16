@@ -1,5 +1,7 @@
 <div class="pagenation-wrap">
+  <div class="my-4">
     <input type="text" [(ngModel)]="searchText" #searchField placeholder="Serach any fields" />
+  </div>
   <table class="w-100">
     <thead>
       <tr>
@@ -23,5 +25,46 @@
       </tr>
     </tbody>
   </table>
-  <jw-pagination [items]="items" (changePage)="onChangePage($event)" class="align-item-center"></jw-pagination>
+  <div class="mt-4 pagination-bar">
+    <jw-pagination [items]="items" (changePage)="onChangePage($event)" class=""></jw-pagination>
+  </div>
+  <hr/>
+  <div class="my-4 d-flex justify-content-between">
+    <label>
+      <b>Per Page: </b>
+      <select [(ngModel)]="selectedValue">
+        <option *ngFor="let item of selectValue;" [value]="item">{{item}}</option>
+      </select>
+    </label>
+    <label>
+      <b>Search in page: </b>
+      <input type="text" [(ngModel)]="searchTableText" placeholder="Serach any fields" />
+    </label>
+  </div>
+  <table class="w-100">
+    <thead>
+      <tr>
+        <th class="num-col">ID</th>
+        <th>Name</th>
+        <th>Phone No</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Nationality</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of collection | paginate: { itemsPerPage: selectedValue, currentPage: p } | 
+        customFilter : {name: searchTableText, phoneno: searchTableText,  email: searchTableText,  gender: searchTableText,  nationality: searchTableText};">
+        <td class="num-col">{{item.id}})</td>
+        <td class="label-name">{{item.name}}</td>
+        <td class="label-name">{{item.phoneno}}</td>
+        <td class="label-name">{{item.email}}</td>
+        <td class="label-name">{{item.gender}}</td>
+        <td class="label-name">{{item.nationality}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="mt-4">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
 </div>
