@@ -30,22 +30,16 @@
   </div>
   <hr/>
   <div class="my-4 d-flex justify-content-between">
-    <input type="text" [(ngModel)]="searchTableText" placeholder="Serach any fields" />
-    <select [(ngModel)]="itemsPerPage">
-      <option value="5">5</option>
-      <option value="10">10</option>
-      <option value="20">20</option>
-      <option value="50">50</option>
-    </select>
-    <!--<select [(ngModel)]="selectedValue">
-      <option *ngFor="let item of items;" [value]="item.name">{{item.name}}</option>
-    </select>
-    <select>
-      <option>25</option>
-      <option>50</option>
-      <option>75</option>
-      <option>100</option>
-    </select>-->
+    <label>
+      <b>Per Page: </b>
+      <select [(ngModel)]="selectedValue">
+        <option *ngFor="let item of selectValue;" [value]="item">{{item}}</option>
+      </select>
+    </label>
+    <label>
+      <b>Search in page: </b>
+      <input type="text" [(ngModel)]="searchTableText" placeholder="Serach any fields" />
+    </label>
   </div>
   <table class="w-100">
     <thead>
@@ -59,7 +53,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of collection | paginate: { id: result?.paginationID, itemsPerPage: itemsPerPage, currentPage: p } | 
+      <tr *ngFor="let item of collection | paginate: { itemsPerPage: selectedValue, currentPage: p } | 
         customFilter : {name: searchTableText, phoneno: searchTableText,  email: searchTableText,  gender: searchTableText,  nationality: searchTableText};">
         <td class="num-col">{{item.id}})</td>
         <td class="label-name">{{item.name}}</td>
@@ -71,6 +65,6 @@
     </tbody>
   </table>
   <div class="mt-4">
-    <pagination-controls [id]="result?.paginationID" (pageChange)="p = $event"></pagination-controls>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
   </div>
 </div>

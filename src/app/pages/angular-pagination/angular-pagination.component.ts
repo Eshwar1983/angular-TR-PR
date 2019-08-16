@@ -13,19 +13,19 @@ export class AngularPaginationComponent implements OnInit {
 
   constructor(private http: Http) { }
   @ViewChild('searchField', { static: false, }) nameField: ElementRef;
-  
+
   // array of all items to be paged
-  // itemsPerPage: { [string: id]: number; } = {};
+  selectedValue;
   items: Array<any>;
   collection: Array<any>;
   p: number = 1;
+  selectValue = [5,10,15,25,50,75,100];
 
   // current page of items
   pageOfItems: Array<any>;
-  
+
   ngOnInit() {
     setTimeout(() => {
-      //console.log(this.nameField.nativeElement);
       this.nameField.nativeElement.focus();
     }, 500);
     // get dummy data
@@ -36,6 +36,7 @@ export class AngularPaginationComponent implements OnInit {
         this.items = data;
         this.collection = data;
       });
+    this.selectedValue = 10;
   }
 
   onChangePage(pageOfItems: Array<any>) {
