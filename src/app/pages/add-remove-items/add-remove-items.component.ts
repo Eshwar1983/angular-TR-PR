@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { FormGroup, FormArray, FormBuilder, Validators,ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormArray, FormBuilder, Validators,ReactiveFormsModule, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-add-remove-items',
@@ -14,7 +14,7 @@ export class AddRemoveItemsComponent implements OnInit {
 
   constructor(fb: FormBuilder) {
     this.addForm = fb.group({
-      'name' : [null, Validators.required]
+      'addName' : [null, Validators.required]
     });
   }
 
@@ -29,9 +29,12 @@ export class AddRemoveItemsComponent implements OnInit {
   }
 
   addContact(value: any) {
-    this.contactList.push(
-      { name: this.txtName }
-    )
+    let valueData = this.txtName.trim();
+    if(valueData.length !== 0) {
+      this.contactList.push(
+        { name: this.txtName }
+      )
+    }
     this.addForm.reset();
   }
 
