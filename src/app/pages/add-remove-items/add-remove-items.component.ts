@@ -30,10 +30,13 @@ export class AddRemoveItemsComponent implements OnInit {
 
   addContact(value: any) {
     let valueData = this.txtName.trim();
-    if(valueData.length !== 0) {
-      this.contactList.push(
-        { name: this.txtName }
-      )
+    if (valueData.length !== 0) {
+      if (this.contactList.filter(x => x.name == valueData).length < 1) {
+        console.log(this.contactList.filter(x => x.name == valueData).length, valueData);
+        this.contactList.push(
+          { name: this.txtName }
+        )
+      }
     }
     this.addForm.reset();
   }

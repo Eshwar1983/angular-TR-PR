@@ -27,6 +27,7 @@ import { DataBindingComponent } from './pages/data-binding/data-binding.componen
 import { DirectivesTypesComponent } from './pages/directives-types/directives-types.component';
 import { AddRemoveItemsComponent } from './pages/add-remove-items/add-remove-items.component';
 import { PipeTransformDataComponent } from './pages/pipe-transform-data/pipe-transform-data.component';
+import { AngularFetchAPIComponent } from './pages/angular-fetch-api/angular-fetch-api.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { PipeTransformDataComponent } from './pages/pipe-transform-data/pipe-tra
     HostDirectiveService,
     ConvertorPipe,
     AddRemoveItemsComponent,
-    PipeTransformDataComponent
+    PipeTransformDataComponent,
+    AngularFetchAPIComponent
   ],
   imports: [
     BrowserModule,
