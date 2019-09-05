@@ -1,0 +1,48 @@
+<div class="fetch-api-wrap">
+  <div class="my-4 d-flex justify-content-between">
+    <label>
+      <b>Per Page: </b>
+      <select [(ngModel)]="selectedValue">
+        <option *ngFor="let item of selectValue;" [value]="item">{{item}}</option>
+      </select>
+    </label>
+    <label>
+      <b>Search in page: </b>
+      <input type="text" [(ngModel)]="searchTableText" placeholder="Serach any fields" />
+    </label>
+  </div>
+  <div class="row mx-0 box-row row-header font-weight-bold">
+    <div class="col text-uppercase text-right title-space">Title:</div>
+    <div class="col">First Name</div>
+    <div class="col">Last Name</div>
+    <div class="col">Gender</div>
+    <div class="col details-col">Address</div>
+    <div class="col text-center">DOB</div>
+    <div>Image</div>
+  </div>
+  <div class="table-row-wrap">
+    <div class="row mx-0 box-row boxShadow" *ngFor="let item of collection | paginate: { itemsPerPage: selectedValue, currentPage: p } | 
+      customFilter : {postcode: searchTableText, last: searchTableText,  email: searchTableText,  gender: searchTableText};">
+      <div class="col text-uppercase text-right title-space"><b>{{item.name.title}}: </b></div>
+      <div class="col">{{item.name.first | titlecase}}</div>
+      <div class="col">{{item.name.last | titlecase}}</div>
+      <div class="col">{{item.gender | uppercase}}</div>
+      <div class="col details-col">
+        <small class="font-weight-bold">Street: </small>{{item.location.street}}<br/>
+        <small class="font-weight-bold">City: </small>{{item.location.city}}<br/>
+        <small class="font-weight-bold">State: </small>{{item.location.state}}<br/>
+        <small class="font-weight-bold">Postcode: </small>{{item.location.postcode}}
+      </div>
+      <div class="col text-center">
+        <!-- {{item.dob.date | date: 'dd'}}/{{item.dob.date | date:'MM'}}/{{item.dob.date | date: 'yyyy'}} -->
+        {{item.dob.date | date: 'dd/MM/yyyy'}}
+      </div>
+      <div>
+        <a href="javascript:;" (click)="displayModule($event)" class="d-inline-block"><img src="{{item.picture.thumbnail}}" /></a>
+      </div>
+    </div>
+  </div>
+  <div class="mt-4 text-center pagination-bar">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>

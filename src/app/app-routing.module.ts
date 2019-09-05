@@ -8,6 +8,7 @@ import { DataBindingComponent } from './pages/data-binding/data-binding.componen
 import { DirectivesTypesComponent } from './pages/directives-types/directives-types.component';
 import { AddRemoveItemsComponent } from './pages/add-remove-items/add-remove-items.component';
 import { PipeTransformDataComponent } from './pages/pipe-transform-data/pipe-transform-data.component';
+import { AngularFetchAPIComponent } from './pages/angular-fetch-api/angular-fetch-api.component';
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent, pathMatch: 'full' },
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'DataBinding', component: DataBindingComponent, pathMatch: 'full' },
   { path: 'DirectivesType', component: DirectivesTypesComponent, pathMatch: 'full' },
   { path: 'AddRemoveItems', component: AddRemoveItemsComponent, pathMatch: 'full' },
-  { path: 'PipeTransformData', component: PipeTransformDataComponent, pathMatch: 'full' }
+  { path: 'PipeTransformData', component: PipeTransformDataComponent, pathMatch: 'full' },
+  { path: 'AngularFetchAPI', component: AngularFetchAPIComponent, pathMatch: 'full' }
 ];
 
 @NgModule({

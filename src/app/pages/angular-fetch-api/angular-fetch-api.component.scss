@@ -1,0 +1,38 @@
+.fetch-api-wrap {
+  height: calc(100% - 15px);
+  overflow: hidden;
+  .table-row-wrap {
+    height: calc(100% - 170px);
+    overflow: auto;
+  }
+  .box-row {
+    &.row-header {
+      background-color: #c2cbdb;
+    }
+    &.boxShadow {
+      border: 1px solid lightgray;
+      border-width: 0 1px 1px 1px;
+      box-shadow: inset 10px -10px 10px #b4bfd3;
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+    }
+    .w-0 {
+      width: 0 !important;
+    }
+    .title-space {
+      max-width: 120px;
+    }
+    .details-col {
+      min-width: 250px;
+    }
+  }
+  .pagination-bar {
+    .ngx-pagination {
+      margin: 0;
+      padding: 0;
+      .current {
+        border-radius: 5px;
+      }
+    }
+  }
+}
