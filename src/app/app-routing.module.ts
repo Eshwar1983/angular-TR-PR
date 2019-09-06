@@ -9,6 +9,7 @@ import { DirectivesTypesComponent } from './pages/directives-types/directives-ty
 import { AddRemoveItemsComponent } from './pages/add-remove-items/add-remove-items.component';
 import { PipeTransformDataComponent } from './pages/pipe-transform-data/pipe-transform-data.component';
 import { AngularFetchAPIComponent } from './pages/angular-fetch-api/angular-fetch-api.component';
+import { FormValidationComponent } from './pages/form-validation/form-validation.component';
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent, pathMatch: 'full' },
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'DirectivesType', component: DirectivesTypesComponent, pathMatch: 'full' },
   { path: 'AddRemoveItems', component: AddRemoveItemsComponent, pathMatch: 'full' },
   { path: 'PipeTransformData', component: PipeTransformDataComponent, pathMatch: 'full' },
-  { path: 'AngularFetchAPI', component: AngularFetchAPIComponent, pathMatch: 'full' }
+  { path: 'AngularFetchAPI', component: AngularFetchAPIComponent, pathMatch: 'full' },
+  { path: 'FormValidation', component: FormValidationComponent, pathMatch: 'full' }
 ];
 
 @NgModule({
