@@ -18,7 +18,6 @@ export class DataBindingComponent implements OnInit {
     if(this.eleWidth.nativeElement.hasAttribute('style')){
       this.eleWidth.nativeElement.removeAttribute('style');
     }else{
-      /*this.eleWidth.nativeElement.style.width = "0%";*/
       this.eleWidth.nativeElement.setAttribute(
         "style", "width: 0; background-color: gray;"
       )
