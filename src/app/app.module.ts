@@ -28,6 +28,7 @@ import { DirectivesTypesComponent } from './pages/directives-types/directives-ty
 import { AddRemoveItemsComponent } from './pages/add-remove-items/add-remove-items.component';
 import { PipeTransformDataComponent } from './pages/pipe-transform-data/pipe-transform-data.component';
 import { AngularFetchAPIComponent } from './pages/angular-fetch-api/angular-fetch-api.component';
+import { FormValidationComponent } from './pages/form-validation/form-validation.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { AngularFetchAPIComponent } from './pages/angular-fetch-api/angular-fetc
     ConvertorPipe,
     AddRemoveItemsComponent,
     PipeTransformDataComponent,
-    AngularFetchAPIComponent
+    AngularFetchAPIComponent,
+    FormValidationComponent
   ],
   imports: [
     BrowserModule,

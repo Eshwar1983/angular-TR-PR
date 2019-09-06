@@ -1,22 +1,7 @@
-<!-- <div>
-  <div class="container">
-      <div class="text-center">
-          <h1>Angular Pagination Component Demo</h1>
-
-          ----items being paged----
-          <div *ngFor="let item of pageOfItems">{{item.name}}</div>
-
-          <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
-      </div>
-  </div>
-</div>
-
-<router-outlet></router-outlet> -->
-
 <div class="main-wrapper" (click) = "wrpperClick($event)" [ngClass]="{'sidebar-open': toggleClass}" (window:resize)="windowResize()">
   <app-header></app-header>
   <app-wrapper></app-wrapper>
   <app-footer></app-footer>
-  <app-sidebar (notify)="sidebarStatus($event)" [isMenuOpen] = "toggleClass"></app-sidebar> <!-- -->
+  <app-sidebar (notify)="sidebarStatus($event)" [isMenuOpen] = "toggleClass"></app-sidebar>
 </div>
 
