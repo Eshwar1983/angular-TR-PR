@@ -1,0 +1,11 @@
+form {
+  &.ng-valid {
+    button.valid-button {
+      cursor: pointer;
+    }
+  }
+  .status-bar {
+    color: white;
+    padding: 5px;
+  }
+}

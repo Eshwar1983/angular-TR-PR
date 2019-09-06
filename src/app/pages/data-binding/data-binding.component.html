@@ -9,8 +9,7 @@
 <div class="d-flex">
   <div class="d-flex">
     <img [src]='product.imageUrl' [title]='product.productName' class="property-img mr-3" [ngClass]="{rounded: shouldShow, noround: !shouldShow}"/>
-    <!-- <button class="btn btn-primary" (click)="borderRadius()">Round</button> -->
-    <div class="button r" id="button-1" (click)="borderRadius()">
+    <div class="button r" id="borderRadiusButton" (click)="borderRadius()">
       <input type="checkbox" class="checkbox" checked>
       <div class="knobs"></div>
       <div class="layer"></div>

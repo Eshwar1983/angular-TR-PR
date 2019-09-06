@@ -82,9 +82,7 @@
   z-index: 1;
 }
 
-/* Button 1 */
-
-#button-1 .knobs:before {
+#borderRadiusButton .knobs:before {
   content: 'YES';
   position: absolute;
   top: 4px;
@@ -102,22 +100,22 @@
   transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
 }
 
-#button-1 .checkbox:checked+.knobs:before {
+#borderRadiusButton .checkbox:checked+.knobs:before {
   content: 'NO';
   left: 42px;
   background-color: #f44336;
 }
 
-#button-1 .checkbox:checked~.layer {
+#borderRadiusButton .checkbox:checked~.layer {
   background-color: #fcebeb;
 }
 
-#button-1 .knobs,
-#button-1 .knobs:before,
-#button-1 .layer {
+#borderRadiusButton .knobs,
+#borderRadiusButton .knobs:before,
+#borderRadiusButton .layer {
   transition: 0.3s ease all;
 }
 
-#button-1 .knobs::before {
+#borderRadiusButton .knobs::before {
   z-index: 2;
 }
